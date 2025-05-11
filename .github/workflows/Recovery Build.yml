@@ -236,7 +236,7 @@ jobs:
           export USE_RECOVERY_INSTALLER=true
           export RECOVERY_INSTALLER_PATH=bootable/recovery/installer
         fi
-        lunch aosp_${{ inputs.DEVICE_NAME }}-eng && mka bootimage -j$(nproc --all)
+        lunch twrp_${{ inputs.DEVICE_NAME }}-eng && mka bootimage -j$(nproc --all)
       working-directory: workspace
 
     - name: Upload to Release
